@@ -1,0 +1,188 @@
+%%%% -*- mode: Latex; TeX-master: "nrt16.tex"; -*-
+\documentclass[11pt]{article}
+
+\vspace{10pt}
+
+\usepackage{fullpage,times,subfigure,fancyhdr}
+\usepackage[pdftex]{color}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{wrapfig}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{cite}
+\usepackage{times}
+\usepackage{amsfonts,amsmath,amssymb,amsthm}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{mdwlist}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{xspace}
+\usepackage[pdftex]{graphicx}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{colortbl}
+
+\definecolor{bl}{rgb}{0.,0.2,0.6}
+\definecolor{dark_blue}{rgb}{0,.15,.5}
+\usepackage[linecolor=dark_blue, linewidth=1.5pt, skipabove=4pt, nobreak=true]{mdframed}
+
+\newcommand{\db}[1]{{\color{dark_blue}{#1}}}
+\newcommand{\bb}[1]{{\textbf{\db{#1}}}}
+
+\newcommand{\rb}[1]{{\color{red}{\it [RB: #1]}}}
+\newcommand{\tz}[1]{{\color{green}{\it [TZ: #1]}}}
+\newcommand{\lb}[1]{{\color{blue}{\it [LB: #1]}}}
+\newcommand{\jovo}[1]{{\color{lime}{\it [JoVo: #1]}}}
+\newcommand{\mr}[1]{{\color{teal}{\it [MR: #1]}}}
+\newcommand{\as}[1]{{\color{violet}{\it [AS: #1]}}}
+\newcommand{\ya}[1]{{\color{lime}{\it [YA: #1]}}}
+\newcommand{\je}[1]{{\color{brown}{\it [JE: #1]}}}
+
+
+\newcommand{\sectn}[1]{\section{#1} \rfoot{\small #1 ~~ \thepage}}
+%\newcommand{\sectn*}[1]{\section*{#1} \rfoot{\small #1 ~~ \thepage}}
+
+\renewcommand{\thepage}{\arabic{page}}
+\renewcommand{\thesection}{\alpha{section}}   % set the section counter to Alpha
+\renewcommand{\thesubsection}{\alpha{section}(\arabic{subsection})}   % set the subsection counter to alpha
+\renewcommand{\thesubsubsection}{\arabic{section}(\alph{subsection}).\arabic{subsubsection}}   % set the subsection counter to alpha
+
+\newcommand\weblink[1]{\underline{\textcolor{dark_blue}{#1}}}
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+{\color{dark_blue}\normalfont\Large\bfseries}
+{\color{dark_blue}\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{0pt}{4pt}
+
+\titleformat{\subsection}
+{\color{dark_blue}\normalfont\large\bfseries}
+{\color{dark_blue}\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{7pt}{3pt}
+
+\titleformat{\subsubsection}
+{\color{dark_blue}\normalfont\large\bfseries}
+{\color{dark_blue}\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
+
+\newcommand{\para}[1]{\vspace{5pt}\noindent{\bb{\bf #1:}}}
+\newcommand{\paranc}[1]{\vspace{5pt}\noindent{\bb{\bf #1}}}
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\newcommand{\idies}{{Institute for Data-Intensive Science and Engineering, Johns Hopkins University}}
+\newcommand{\jhu}{{Johns Hopkins University}}
+
+\usepackage{pifont}
+\usepackage{xspace}
+\newcommand{\circone}{\ding{172}\xspace}
+\newcommand{\circtwo}{\ding{173}\xspace}
+\newcommand{\circthree}{\ding{174}\xspace}
+\newcommand{\circfour}{\ding{175}\xspace}
+
+\tolerance=1000
+
+%\addtolength{\textfloatsep}{-10pt}
+
+%\renewcommand{\topfraction}{0.99}
+%\renewcommand{\textfraction}{0.10}
+%\renewcommand\floatpagefraction{0.99}
+%\renewcommand{\subfigcapskip}{0pt}
+
+\makeatletter
+\renewcommand{\labelitemi}{*}
+
+\title{Brain Comp Infra: EAGER: BrainLab CI: Collaborative, Community Experiments with Data-Quality Controls through Continuous Integration}
+
+\author{{Randal Burns (PI) }\\
+         {\small Department of Computer Science} \\
+         \\
+         Joshua T. Western and Michael I. Miller\\
+         {\small Department of Biomedical Engineering}\\
+          \\
+         {\bf Kavli Neuroscience Disovery Institute}
+         { \bf Johns Hopkins University } \\
+}
+
+
+
+%\addtolength{\textfloatsep}{-20pt}
+
+\tolerance=500
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{center}
+\large
+ Proposal to the National Science Foundation \\
+ Program Solicitation NSF DCL 16-706--- National Science Foundation Brain Computational Infrastructure \\
+
+\end{center}
+
+\newpage
+
+\makeatletter
+
+\tolerance=500
+
+\setcounter{page}{1}
+\setcounter{section}{1}
+\sectn{PROJECT SUMMARY}
+
+\normalsize
+
+\input{summary.blci.tex}
+
+\newpage
+
+\setcounter{section}{3}
+\setcounter{page}{1}
+\sectn{PROJECT DESCRIPTION}
+
+\input{desc.blci.tex}
+
+
+\setcounter{section}{5}
+\setcounter{page}{1}
+\rfoot{\small References Cited ~~ \thepage}
+
+%\input{bibitems}
+\setcounter{page}{1}
+\small
+\begin{spacing}{0.9}
+\bibliographystyle{ieeetr}
+\bibliography{blci}
+\end{spacing}
+
+\normalsize
+
+\newpage
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+\rfoot{\small Data Management Plan ~~ \thepage}
+
+\section*{Data Management Plan}
+
+\input{dmp.blci.tex}
+
+\end{document}
+
+

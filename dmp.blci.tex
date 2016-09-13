@@ -1,0 +1,112 @@
+
+Our data management plan covers several distinct classes of data: 
+\begin{itemize}
+\addtolength{\itemsep}{-5pt}
+\item neuroscience data contributed by the open science community,
+\item software and documentation developed by the project team, and 
+\item operational data, such as logging and usage statistics.
+\end{itemize}
+\vspace{-5pt}
+All data sets will be archival; they are intended for long-term preservation and
+subject to the data management policies described below.
+
+This project is primarily conducted out of the KAVLI Neuroscience Discovery 
+Institute.  Because it is a new institute, we are in the process of codifying 
+data management principles.  We adopt the data management practices of 
+the Institute for Data-Intensive Science and Engineering (IDIES) of which 
+Burns, Vogelstein, and Miller are all active members.  IDIES aggregates the
+data management and scientific computing exerptise at Johns Hopkins.
+
+IDIES has successfully deployed data-intensive Web services that contribute 
+computation and analysis to the public for several disciplines, including astronomy (sdss.org), 
+computational fluids (turbulence.pha.jhu.edu), and connectomics 
+(openconnecto.me). IDIES hosts more than 11 petabytes of contributed data in support of 
+many disciplines.  IDIES has 13 years of experience 
+hosting publicly accessible scientific databases and data-intensive Web-services. The best 
+practices of the Institute will be adopted, as described below.
+
+\subsubsection*{Licenses}
+All scientific data sets will be released under the {\em Open Data Commons Attribution} (ODC-By) license.
+The license allows for free use of all data products, including copying, sharing, and redistributing data, and
+deriving new, customized data products.  Our specific license terms require that all subsequent
+data use attributes the original publication that contributed the data as well as the project 
+that hosts the data.  
+All software and course material will be released under the Apache 2.0 license. This license is 
+permissive; it places few restrictions on the use of software.
+Derived software products or software systems that integrate our code or course materials 
+do not need to be open-source.
+
+\para{Documentation and Metadata} Source code documentation will be collocated and released with 
+software, governed by the same open source license, and hosted on public repositories. 
+Documentation for datasets are treated similarly. They 
+will be managed in version control public repositories. They will be available as links that are 
+collocated with the Web-services that provide access to data. These are already standard practices 
+of the collaborators. 
+
+\subsubsection*{Logging and Reporting Data}
+We will use IDIES' extensive logging infrastructure to  track scientists
+use data-intensive Web-services and supercomputing allocations in their research.
+One of the most useful byproducts of the Sloan Digital Sky Survey  data has been the 
+usage logs that we have kept since
+the very beginning of the project: every Web hit and every single query have been logged since Day 1.
+Today, the log database is over 2TB, and contains rich historical information about how astronomers
+learned to access a virtual telescope. 
+This has resulted in an amazingly rich and useful resource
+for SDSS scientists and project managers and, because the dataset is available to anyone, many other
+projects and researchers. IDIES has generalized this logging infrastructure for all projects.
+
+Based on our logging infrastructure, we will be able to analyze the data usage patterns 
+and contributions.  The goal is to inform the evaluation and reporting process 
+with data-driven metrics at an arbitrarily fine granularity.  
+
+\para{Data Integrity} IDIES systems make several efforts to ensure the integrity of the
+ data and to prevent malicious or unintended modification. We use RESTful interfaces 
+ for data access and to execute analysis routines, ensuring that all interfaces are functional and 
+ do not modify the original data. For data stored at IDIES, we also regularly crawl our data 
+ checking content against pre-computed checksums to protect against corruption from hardware and software errors. 
+ For data stored in the Amazon cloud, we will rely on the integrity of AWS's data services. 
+ 
+
+\para{Security, Privacy, and Embargo}
+  The privacy of data sets is implemented with a combination of a user authentication in 
+  our project management system and the secure Web-services (\url{https://}).  
+  The combination allows users to self-manage access control to their data.  They may 
+  set individual data sets, images, and annotation projects as public or private.
+  Derived data products may be kept private by registered users of the system. 
+  Private data sets will be encrypted end-to-end for all Web-services and visualization tools.
+
+  The contributors of data maintain control of the data even after placing it in the system.
+  They can determine when to make data public, when to release data from embargo, etc.
+
+\para{Storage and Backup During the Project} The project builds a prototype that stores 
+data in the Amazon Cloud.  Amazon provides guarantees about the reliability of data
+in the service level agreements, e.g.~some data services implement triply redundant storage. 
+
+\para{Long-Term Archival and Preservation}  While the goal of this project is to deploy a 
+prototype, we will accumulate valuable data sets in doing so.  At the end of the project,
+we will ingest these data sets in to the IDIES' storage infrastructure,
+IDIES has preserved all scientific data that has 
+  been ingested and will continue to do so in perpetuity. 
+  The first resources developed were the Sloan Digital Sky Survey (sdss.org). 
+  Multiple strategies have been used to maintain these data. We 
+  have partnered with Google to store all image data on an ongoing basis. The development of 
+  new data-intensive clusters (GrayWulf 2006 and Data-Scope 2012) has provisioned a small 
+  fraction of resources to maintain the entirety of our previously collected data. Our preservation 
+  ethic includes preserving the function and semantics of the data long after project operation 
+  completes. We will do so by defining archival packages that include algorithms and methods as 
+  well as data. We recognize sustainable preservation as one of the most challenging aspects of 
+  developing data resources and note our commitment and experience in defining strategies to 
+  fund and maintain resource-sharing beyond project lifetimes. 
+
+\para{Data Sharing and Dissemination} This project focuses on making public datasets broadly 
+available, leveraging the team’s expertise in storage systems and data 
+processing to host scientific datasets for the nueroscience community.
+This process makes data a community resource, greatly enhancing their 
+utility. All public datasets referenced in this project will be available through Web-services. 
+
+\para{Ownership, Copyright, Intellectual Property} Our projects encourages scientists and communities 
+that ``open source'' their data in exchange for storage and analysis services. Open-source data 
+becomes a community resource, unrestricted for non-commercial use. Data providers retain 
+copyright privileges and reserve licensing and approval rights for commercial uses of data. 
+Users of the data reserve rights to their algorithms and analysis techniques.
+
